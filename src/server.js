@@ -104,6 +104,6 @@ app.get('/products/:category_id', authChecker, function(req, res) {
 	}));
 });
 
-app.listen(3030, function() {
+app.listen(process.env.PORT || 3030, function() {
 	console.log('Server start http://localhost:3030');
 });
