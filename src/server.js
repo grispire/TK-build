@@ -104,6 +104,12 @@ app.get('/products/:category_id', authChecker, function(req, res) {
 	}));
 });
 
+// prevent cannot GET
+app.get('*', function(req, res) {
+    res.redirect('/');
+});
+
+
 app.listen(process.env.PORT || 3030, function() {
 	console.log('Server start http://localhost:3030');
 });
